@@ -1,0 +1,17 @@
+name: Deployment
+'on':
+  push:
+    branches:
+      - main
+jobs:
+  deploying:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: pip install -r requirements.txt
+      - uses: neobrains/space-deployment-github-action@v0.3
+        with:
+          access_token: ${{ secrets.ACCESS_TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          space_push: true
