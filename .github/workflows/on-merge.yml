@@ -3,6 +3,7 @@ name: Deployment
   push:
     branches:
       - main
+
 jobs:
   deploying:
     runs-on: ubuntu-latest
