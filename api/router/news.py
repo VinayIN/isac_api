@@ -3,14 +3,13 @@ from fastapi import APIRouter
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from datetime import datetime, timezone
-from deta import Deta
+from api.utils import text_db
 
 router = APIRouter(
     prefix="/news",
     tags=["news"]
 )
 
-text_db = Deta("a0icfx3dmha_m5PSYVJvcJ6bXxEZbFnRLpCnhMUaau4L")
 class News(BaseModel):
     description: str
     url: str

@@ -1,5 +1,4 @@
 from fastapi import APIRouter
-from api.utils import do_nothing
 
 router = APIRouter(
     prefix="/events",

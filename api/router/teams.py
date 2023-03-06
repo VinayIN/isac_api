@@ -3,14 +3,14 @@ from fastapi import APIRouter
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from datetime import datetime, timezone
-from deta import Deta
+from api.utils import text_db
 
 router = APIRouter(
     prefix="/teams",
-    tags=["teams"]
+    tags=["teams"],
 )
 
-text_db = Deta("a0icfx3dmha_m5PSYVJvcJ6bXxEZbFnRLpCnhMUaau4L")
+
 class TeamMember(BaseModel):
     department: str
     email: Optional[str] = None
