@@ -1,6 +1,6 @@
 fastapi
 python-multipart
 deta
-jwt
+PyJWT
 passlib
 bcrypt

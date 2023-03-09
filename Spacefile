@@ -8,5 +8,11 @@ micros:
     presets:
       env:
         - name: JWT_SECRET_KEY
-          description: Hashing key
-          default: "09d25e094faa6ca2556"
+          description: JWT encoding key, keep this secret
+          default: "8c337fd38c7651c2e4d739de333b7298a092aedb43ac6e87a226718204892cea"
+        - name: ACCESS_TOKEN_EXPIRE_MINUTES
+          description: token expiry time in minutes
+          default: "15"
+        - name: REFRESH_TOKEN_VALIDITY_MINUTES
+          description: refresh token validity, need to login once timeout
+          default: "720"
